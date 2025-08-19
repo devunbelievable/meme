@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ra trường hay ở lại - Quyết định nằm ở hôm nay!</title>
+    <title>Fashion Store - Đồ án tốt nghiệp Spring Boot + Vue.js | Web bán hàng thời trang</title>
     <!-- Meta Tags for SEO -->
-    <meta name="description"
-        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Quyết định ra trường hay ở lại phụ thuộc vào hành động của bạn ngay hôm nay!">
-    <meta name="keywords" content="ra trường, ở lại, quyết định, sinh viên, giá mà làm sớm hơn, động lực, thành công">
+    <meta name="description" content="Fashion Store - Đồ án tốt nghiệp Spring Boot + Vue.js">
+    <meta name="keywords"
+        content="Website bán hàng thời trang được phát triển bằng Spring Boot (RESTful APIs) và Vue.js. Đây là đồ án tốt nghiệp, với đầy đủ chức năng giỏ hàng, quản lý sản phẩm, đơn hàng và trải nghiệm mua sắm trực tuyến.">
     <meta name="author" content="Your Name">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/">
-    <meta property="og:title" content="Ra trường hay ở lại - Quyết định nằm ở hôm nay!">
+    <meta property="og:url" content="http://test.haravan.work.gd/">
+    <meta property="og:title" content="Fashion Store - Đồ án tốt nghiệp Spring Boot + Vue.js">
     <meta property="og:description"
-        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Hành động ngay hôm nay!">
+        content="Website bán hàng thời trang được phát triển bằng Spring Boot (RESTful APIs) và Vue.js. Đây là đồ án tốt nghiệp, với đầy đủ chức năng giỏ hàng, quản lý sản phẩm, đơn hàng và trải nghiệm mua sắm trực tuyến.">
     <meta property="og:image" content="https://github.com/devunbelievable/meme/raw/master/image/preview.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,10 +25,10 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourdomain.com/">
-    <meta property="twitter:title" content="Ra trường hay ở lại - Quyết định nằm ở hôm nay!">
+    <meta property="twitter:url" content="http://test.haravan.work.gd/">
+    <meta property="twitter:title" content="Fashion Store - Đồ án tốt nghiệp Spring Boot + Vue.js">
     <meta property="twitter:description"
-        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Hành động ngay hôm nay!">
+        content="Website bán hàng thời trang được phát triển bằng Spring Boot (RESTful APIs) và Vue.js. Đây là đồ án tốt nghiệp, với đầy đủ chức năng giỏ hàng, quản lý sản phẩm, đơn hàng và trải nghiệm mua sắm trực tuyến.">
     <meta property="twitter:image" content="https://github.com/devunbelievable/meme/raw/master/image/preview.webp">
     <meta property="twitter:image:alt" content="Ra trường hay ở lại - Quyết định nằm ở hôm nay!">
 
@@ -37,19 +37,20 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="canonical" href="http://test.haravan.work.gd/">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "Ra trường hay ở lại - Quyết định nằm ở hôm nay!",
-      "description": "Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Quyết định ra trường hay ở lại phụ thuộc vào hành động của bạn ngay hôm nay!",
-      "thumbnailUrl": "https://github.com/devunbelievable/meme/raw/master/image/preview.webp",
-      "contentUrl": "https://github.com/devunbelievable/meme/raw/master/video/nod.mp4",
-      "uploadDate": "2023-10-01T08:00:00+08:00",
-      "duration": "PT30S"
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Fashion Store",
+    "url": "http://test.haravan.work.gd/",
+    "description": "Website bán hàng thời trang phát triển bằng Spring Boot và Vue.js.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Nhóm Đồ Án"
+    }
     }
     </script>
     <style>
@@ -109,6 +110,41 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            /* to hơn */
+            height: 200px;
+            /* hình tròn */
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn::before {
+            content: "▶";
+            /* chỉ hiện icon play */
+            color: #fff;
+            font-size: 8rem;
+            /* icon to hơn */
+            margin-left: 30px;
+            /* để mũi tên cân giữa vòng tròn */
+        }
+
+        .play-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translate(-50%, -50%) scale(1.1);
+            /* hiệu ứng hover */
         }
 
         .video-container video {
@@ -224,10 +260,11 @@
         </div>
 
         <div class="video-container">
-            <video id="memeVideo" autoplay loop playsinline>
+            <video id="memeVideo" loop playsinline>
                 <source src="https://github.com/devunbelievable/meme/raw/master/video/nod.mp4" type="video/mp4">
                 Trình duyệt của bạn không hỗ trợ thẻ video.
             </video>
+            <button id="playBtn" class="play-btn"></button>
         </div>
 
         <div class="quote">
@@ -245,24 +282,14 @@
     </div>
 
     <script>
-        // Lấy tham chiếu đến phần tử video
         const video = document.getElementById('memeVideo');
+        const playBtn = document.getElementById('playBtn');
 
-        // Thiết lập video tự động phát và lặp lại
-        document.addEventListener('DOMContentLoaded', function () {
-            // Thử phát video với âm thanh
-            video.play().catch(function (error) {
-                console.log('Tự động phát với âm thanh bị chặn: ', error);
-                // Nếu bị chặn, thử phát mà không có âm thanh
-                video.muted = true;
-                video.play();
-            });
-        });
-
-        // Xử lý sự kiện khi video kết thúc và bắt đầu lại
-        video.addEventListener('ended', function () {
-            video.currentTime = 0;
+        // Chỉ phát khi user click
+        playBtn.addEventListener('click', () => {
+            video.muted = false;   // đảm bảo có tiếng
             video.play();
+            playBtn.style.display = 'none'; // ẩn nút sau khi phát
         });
     </script>
 </body>
