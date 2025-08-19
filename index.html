@@ -5,6 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ra trường hay ở lại - Quyết định nằm ở hôm nay!</title>
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Quyết định ra trường hay ở lại phụ thuộc vào hành động của bạn ngay hôm nay!">
+    <meta name="keywords" content="ra trường, ở lại, quyết định, sinh viên, giá mà làm sớm hơn, động lực, thành công">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Ra trường hay ở lại - Quyết định nằm ở hôm nay!">
+    <meta property="og:description"
+        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Hành động ngay hôm nay!">
+    <meta property="og:image" content="https://yourdomain.com/share-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Ra trường hay ở lại - Quyết định nằm ở hôm nay!">
+    <meta property="twitter:description"
+        content="Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Hành động ngay hôm nay!">
+    <meta property="twitter:image" content="https://yourdomain.com/share-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Ra trường hay ở lại - Quyết định nằm ở hôm nay!",
+      "description": "Đừng để phút cuối mới tiếc: Giá mà mình làm sớm hơn. Quyết định ra trường hay ở lại phụ thuộc vào hành động của bạn ngay hôm nay!",
+      "thumbnailUrl": "https://yourdomain.com/thumbnail.jpg",
+      "contentUrl": "https://github.com/devunbelievable/meme/raw/master/video/nod.mp4",
+      "uploadDate": "2023-10-01T08:00:00+08:00"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -57,22 +100,17 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
-            height: 0;
-            margin: 30px 0;
+            max-width: 800px;
+            margin: 30px auto;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .video-container video {
             width: 100%;
-            height: 100%;
-            border: none;
+            height: auto;
+            display: block;
             border-radius: 15px;
         }
 
@@ -105,6 +143,8 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -180,10 +220,10 @@
         </div>
 
         <div class="video-container">
-            <iframe width="992" height="603" src="https://www.youtube.com/embed/vTLqA9ugoU8" title="The nod’s"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video id="memeVideo" autoplay loop playsinline>
+                <source src="https://github.com/devunbelievable/meme/raw/master/video/nod.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
         </div>
 
         <div class="quote">
@@ -199,6 +239,28 @@
             <p>© 2025 - Hành trình của bạn bắt đầu từ đây</p>
         </div>
     </div>
+
+    <script>
+        // Lấy tham chiếu đến phần tử video
+        const video = document.getElementById('memeVideo');
+
+        // Thiết lập video tự động phát và lặp lại
+        document.addEventListener('DOMContentLoaded', function () {
+            // Thử phát video với âm thanh
+            video.play().catch(function (error) {
+                console.log('Tự động phát với âm thanh bị chặn: ', error);
+                // Nếu bị chặn, thử phát mà không có âm thanh
+                video.muted = true;
+                video.play();
+            });
+        });
+
+        // Xử lý sự kiện khi video kết thúc và bắt đầu lại
+        video.addEventListener('ended', function () {
+            video.currentTime = 0;
+            video.play();
+        });
+    </script>
 </body>
 
 </html>
